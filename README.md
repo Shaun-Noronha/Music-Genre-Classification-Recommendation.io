@@ -97,31 +97,81 @@ The PCA plot displayed here illustrates the distribution of music genres based o
 ## Implementation
 We used the data for our model as follows:
 
-- **Training Data:** 80% of the Data.
-- **Test Data:** 20% of the Data.
+- **Training Data:** 70% of the Data.
+- **Test Data:** 30% of the Data.
 
-For the demo, we only considered less than 1% for quick inference.
+For the demo, we have implemented 4 models:
 
-### Bidirectional LSTM
-Bidirectional LSTM (BiLSTM) is a recurrent neural network used primarily for natural language processing. Unlike standard LSTM, the input flows in both directions, and it’s capable of utilizing information from both sides. It’s also a powerful tool for modeling the sequential dependencies between words and phrases in both directions of the sequence.
+## Model 1: Sequential Dense Model
+- **Architecture:**
+  - Consists of three densely connected layers with 256, 128, and 64 neurons, respectively, each followed by ReLU activation.
+  - Concludes with a softmax layer for classification into 10 genres.
+- **Training:**
+  - Trained over 70 epochs using the Adam optimizer.
+- **Accuracy:**
+  - Achieved a validation accuracy of approximately 90.29%.
 
-![BiLSTM](bilstm-1.jpg)
+## Model 2: Enhanced Dense Model with Dropout
+- **Architecture:**
+  - Incorporates a denser setup with initial 512 neurons, followed by layers with 256, 128, and 64 neurons, each equipped with ReLU activation.
+  - Dropout layers with a dropout rate of 0.2 follow each dense layer to prevent overfitting.
+  - Finishes with a softmax output layer.
+- **Training:**
+  - Conducted training for 100 epochs using the Adam optimizer.
+- **Accuracy:**
+  - Reached a validation accuracy of about 92.62%.
 
-### Nearest-Neighbors
-A nearest-neighbors model is a technique used for searching and retrieving similar items or data points from a dataset based on their similarity to a query item. It operates on the principle that items that are close or similar in a feature space should also be similar in their inherent characteristics or properties.
+## Model 3: Similar Enhanced Dense Model with SGD
+- **Architecture:**
+  - Similar to Model 2, with layers of 512, 256, 128, and 64 neurons, each followed by a dropout of 0.2.
+  - ReLU activation function for all layers, capped with a softmax layer for genre classification.
+- **Training:**
+  - Extensively trained over 700 epochs using Stochastic Gradient Descent (SGD) optimizer for robust convergence.
+- **Accuracy:**
+  - Achieved a maximum validation accuracy of 92.82%.
 
-The nearest-neighbors model works by organizing the dataset into a structure that efficiently retrieves the nearest or most similar items to a given query.
+## Model 4: High-Capacity Dense Model with Increased Dropout
+- **Architecture:**
+  - Begins with a high neuron count of 1024, followed by subsequent layers of 512, 256, 128, and 64 neurons, all using ReLU activation.
+  - Each layer is followed by a higher dropout rate of 0.3 to enhance the model's generalization capabilities.
+  - Concludes with a softmax classification layer.
+- **Training:**
+  - Trained for 500 epochs with the RMSprop optimizer, optimizing for more complex patterns.
+- **Accuracy:**
+  - Achieved the highest validation accuracy of 94.03% among the models, showcasing its effectiveness in handling overfitting while maintaining accuracy.
 
-### Annoy
-Annoy is a library used for approximate nearest-neighbor search. It's particularly useful when dealing with high-dimensional data and finding nearest neighbors efficiently. The library provides a data structure and algorithms that enable fast approximate searches for nearest neighbors, especially in very large datasets.
+!
+    
+## Model Architecture
+- **Input Layer:**
+  - Images are preprocessed to a uniform size of 48x48 pixels and converted to grayscale to reduce computational complexity while retaining necessary features for effective emotion recognition.
+- **Convolutional Layers:**
+  1. The first layer consists of 128 filters with a kernel size of 3x3, using ReLU activation. This layer is followed by a MaxPooling layer with a pool size of 2x2 to reduce spatial dimensions.
+  2. The second set includes 256 filters with the same kernel size and activation, followed by another MaxPooling layer.
+  3. Subsequent layers increase the number of filters to 512, maintaining the kernel size and using ReLU activation, with additional MaxPooling layers after each convolutional layer.
+- **Dropout Layers:**
+  - Dropout layers with a rate of 0.4 are applied after each pooling layer to prevent overfitting, effectively reducing the risk of co-adaptation among neurons.
+- **Flattening Layer:**
+  - The multi-dimensional output from the convolutional and pooling layers is flattened into a one-dimensional array to serve as input for the dense layers.
+- **Dense Layers:**
+  - After flattening, the network includes:
+    - A dense layer with 512 neurons and ReLU activation.
+    - A second dense layer with 256 neurons, also activated by ReLU.
+    - Both layers include a dropout rate of 0.3 to further combat overfitting.
+- **Output Layer:**
+  - The final layer is a softmax layer with 7 outputs, each corresponding to a different emotional state.
 
-### HnswLib
-HNSW (Hierarchical Navigable Small World) is a library used for approximate nearest neighbor search, similar to Annoy. It's designed to efficiently locate approximate nearest neighbors in high-dimensional spaces, especially in scenarios where traditional methods might struggle due to the curse of dimensionality.
+## Classification Labels
+The model classifies each input image into one of seven emotional states, which are:
+1. Angry
+2. Disgust
+3. Fear
+4. Happy
+5. Neutral
+6. Sad
+7. Surprise
 
-#### Model Design
-The model used is seen below:
-
-![LSTM Model](LSTM.jpg)
+These labels are crucial for the system as they directly influence the music genre recommendation logic, where each mood is associated with specific genres to enhance the listener's experience based on their emotional state.
 
 ## Conclusion & Future Work
 1. The performance of the nearest neighbor search may vary across different methods (NearestNeighbors, AnnoyIndex, hnswlib). Comparing their accuracy, efficiency, and recall rates can help identify the most suitable method.
