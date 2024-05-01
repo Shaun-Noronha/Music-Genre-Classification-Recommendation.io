@@ -26,8 +26,6 @@ Pop
 Reggae
 Rock
 
-# GTZAN Music Genre Classification Dataset
-
 ## Overview
 The GTZAN Music Genre Classification dataset, available on Kaggle, contains audio features extracted from segmented 3-second clips of music tracks. These features provide insights into various aspects of the audio signals and are commonly used in music genre classification tasks.
 
