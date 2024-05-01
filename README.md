@@ -146,7 +146,7 @@ For the demo, we have implemented 4 models:
 
 In the Advanced Music Genre Classification System, mood detection plays a crucial role in enhancing the music discovery experience by aligning genre recommendations with the listener's emotional state.
 Here's the implementation of the mood detection component of the project:
-## Model Architecture
+### Model Architecture
 - **Input Layer:**
   - Images are preprocessed to a uniform size of 48x48 pixels and converted to grayscale to reduce computational complexity while retaining necessary features for effective emotion recognition.
 - **Convolutional Layers:**
@@ -165,7 +165,7 @@ Here's the implementation of the mood detection component of the project:
 - **Output Layer:**
   - The final layer is a softmax layer with 7 outputs, each corresponding to a different emotional state.
 
-## Classification Labels
+### Classification Labels
 The model classifies each input image into one of seven emotional states, which are:
 1. Angry
 2. Disgust
@@ -182,9 +182,9 @@ These labels are crucial for the system as they directly influence the music gen
 
 This figure here shows the pictures for 4 different moods. The model accordingly predicts the mood for all 4 pictures in the figure accurately.
 
-## Recommendation Component of the Advanced Music Genre Classification System
+### Recommendation Component of the Advanced Music Genre Classification System
 
-## Overview
+### Overview
 The recommendation component of the Advanced Music Genre Classification System leverages cosine similarity to offer music genre suggestions that align closely with a selected track, enhancing the user's music discovery experience.
 
 ## Detailed Explanation
