@@ -45,7 +45,8 @@ Here is a brief description of each feature included in the dataset:
 
 
 ## Exploratory Data Analysis
-1. ![Boxplot](Boxplot.png)
+1. **BPM Boxplot for Genres**
+![Boxplot](Boxplot.png)
 The boxplot highlights varied BPM distributions among genres, suggesting tempo as a key feature in genre classification.
 Blues and Jazz: Both show a wide range of BPMs with several outliers, indicating diverse substyles within each genre that range from slow to fast tempos.
 Classical and Reggae: These genres exhibit narrower BPM ranges, which align with their more consistent and genre-specific tempos.
@@ -53,14 +54,16 @@ Country and Pop: Both have moderate BPM ranges around 120, typical for genres th
 Disco and Metal: These genres stand out with higher medians and wider ranges, reflecting their energetic and fast-paced natures.
 Hip Hop and Rock: Display moderate to wide BPM distributions, accommodating a variety of subgenres from laid-back to aggressive styles.
 
-2. ![Correlation](Correlation.png)
+3. **Correlation Heatmap (for the MEAN variables)**
+![Correlation](Correlation.png)
 This correlation heatmap showcases the relationships between various mean variables extracted for music genre classification. Here are key observations:
 Strong Interrelationships: Many of the Mel-Frequency Cepstral Coefficients (MFCCs), which are critical for capturing the timbre of audio signals, exhibit moderate to strong correlations with each other. This suggests redundancy in the information they provide, which may impact model complexity and effectiveness.
 Lower Correlations with Non-MFCC Features: Features such as chroma_stft_mean, rms_mean, and spectral_centroid_mean show lower correlations with MFCCs. These differences indicate that combining these features with MFCCs could provide complementary information, enhancing the genre classification model's accuracy.
 RMS and Perceptual Features: The root mean square (rms_mean), which measures the audio signal's power, and the perceptual mean (percept_mean), likely relating to perceived loudness or clarity, also show limited correlation with MFCCs. Including these could be vital for understanding dynamics and clarity, which are genre-defining characteristics.
 Spectral Features' Interaction: The spectral centroid and bandwidth (spectral_centroid_mean, spectral_bandwidth_mean), which reflect the spectral "center of mass" and the width of the spectral energy distribution, respectively, demonstrate a noteworthy relationship. This relationship is important as it could help in distinguishing genres based on their spectral content.
 
-3. ![PCA](PCA.jpg)
+5. **PCA on Genres**
+![PCA](PCA.jpg)
 The Principal Component Analysis (PCA) plot displayed here illustrates the distribution of music genres based on the reduction of multiple audio feature dimensions into two principal components. Key observations from this PCA on genres are as follows:
 
 Distinct Clusters: Several genres, particularly classical and metal, form distinct clusters, indicating that their audio features are notably different from other genres. This suggests that PCA can effectively reduce feature space while retaining significant genre-specific characteristics.
