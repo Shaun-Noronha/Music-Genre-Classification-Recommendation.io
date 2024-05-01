@@ -78,7 +78,7 @@ This correlation heatmap showcases the relationships between various mean variab
 ![PCA](PCA.png)
 The PCA plot displayed here illustrates the distribution of music genres based on the reduction of multiple audio feature dimensions into two principal components. Below are key observations derived from the analysis:
 
- **Distinct Clusters:**
+- **Distinct Clusters:**
   - Several genres, particularly classical and metal, form distinct clusters, indicating that their audio features are notably different from other genres. 
   - This suggests that PCA can effectively reduce feature space while retaining significant genre-specific characteristics.
 
