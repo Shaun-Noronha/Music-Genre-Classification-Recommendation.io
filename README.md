@@ -179,7 +179,29 @@ These labels are crucial for the system as they directly influence the music gen
 
 ## Observations and Results
 ![Mood](Mood.jpg)
-This figure here shows the pictures for 4 different moods. The model accordingly predicts the mood for all 4 pictures in the figure acurately.
+
+This figure here shows the pictures for 4 different moods. The model accordingly predicts the mood for all 4 pictures in the figure accurately.
+
+# Recommendation Component of the Advanced Music Genre Classification System
+
+## Overview
+The recommendation component of the Advanced Music Genre Classification System leverages cosine similarity to offer music genre suggestions that align closely with a selected track, enhancing the user's music discovery experience.
+
+## Detailed Explanation
+### Feature Scaling
+- To ensure that all features contribute equally to the similarity calculation, the data is normalized using standard scaling. This process transforms the feature data to have a mean of zero and a standard deviation of one.
+
+### Cosine Similarity Computation
+- The core of the recommendation engine is the cosine similarity measure, which computes the cosine of the angle between two vectors. This step generates a similarity matrix representing the musical similarity between each pair of tracks in the dataset.
+
+### Recommendation Generation
+- When a user selects a track, the system identifies the top five tracks with the highest cosine similarity scores, suggesting these as recommendations. This is achieved by sorting the similarity values in descending order and selecting the top entries.
+
+## Implementation Results
+![Recommendation](Recommendation.jpg)
+
+
+
 
 ## Conclusion & Future Work
 
