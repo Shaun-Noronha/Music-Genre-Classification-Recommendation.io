@@ -142,6 +142,8 @@ For the demo, we have implemented 4 models:
 
 ![Models](Models.jpg)
 
+## Mood Detection Component
+
 In the Advanced Music Genre Classification System, mood detection plays a crucial role in enhancing the music discovery experience by aligning genre recommendations with the listener's emotional state.
 Here's the implementation of the mood detection component of the project:
 ## Model Architecture
