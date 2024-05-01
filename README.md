@@ -63,7 +63,7 @@ RMS and Perceptual Features: The root mean square (rms_mean), which measures the
 Spectral Features' Interaction: The spectral centroid and bandwidth (spectral_centroid_mean, spectral_bandwidth_mean), which reflect the spectral "center of mass" and the width of the spectral energy distribution, respectively, demonstrate a noteworthy relationship. This relationship is important as it could help in distinguishing genres based on their spectral content.
 
 5. **PCA on Genres**
-![PCA](PCA.jpg)
+![PCA](PCA.png)
 The Principal Component Analysis (PCA) plot displayed here illustrates the distribution of music genres based on the reduction of multiple audio feature dimensions into two principal components. Key observations from this PCA on genres are as follows:
 
 Distinct Clusters: Several genres, particularly classical and metal, form distinct clusters, indicating that their audio features are notably different from other genres. This suggests that PCA can effectively reduce feature space while retaining significant genre-specific characteristics.
