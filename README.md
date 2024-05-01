@@ -182,9 +182,7 @@ These labels are crucial for the system as they directly influence the music gen
 This figure here shows the pictures for 4 different moods. The model accordingly predicts the mood for all 4 pictures in the figure acurately.
 
 ## Conclusion & Future Work
-1. The performance of the nearest neighbor search may vary across different methods (NearestNeighbors, AnnoyIndex, hnswlib). Comparing their accuracy, efficiency, and recall rates can help identify the most suitable method.
-2. Using a sentence tokenizer from the BERT family offers advantages in tokenizing text into meaningful segments. Instead of the current embedding model that learns embeddings from scratch, leveraging BERT-based tokenization can benefit the process.
-3. Employing exact nearest neighbor search metrics such as cosine similarity or Euclidean distance could refine the search process.
+
 
 ### GitHub Repository
 Here is the link for the [repository](https://github.com/Shaun-Noronha/Music-Genre-Classification-Recommendation.io).
