@@ -203,11 +203,9 @@ The recommendation component of the Advanced Music Genre Classification System l
 
 ## Conclusion & Future Work
 
-# Conclusion
-
 The Advanced Music Genre Classification System represents a significant advancement in the application of machine learning to the field of music analysis. By leveraging a comprehensive approach that includes genre classification, mood recognition, and music recommendation, this system not only categorizes music more accurately but also enhances user interaction by tailoring recommendations to their emotional state and musical preferences. The integration of various techniques—from deep learning models for genre classification to emotion detection algorithms for mood analysis—ensures that the system is robust and versatile in handling diverse musical datasets like GTZAN.
 
-# Future Work
+## Future Work
 
 Looking ahead, there are several avenues for further development and enhancement of the system:
 
