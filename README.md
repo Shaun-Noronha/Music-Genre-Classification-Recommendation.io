@@ -177,6 +177,10 @@ The model classifies each input image into one of seven emotional states, which 
 
 These labels are crucial for the system as they directly influence the music genre recommendation logic, where each mood is associated with specific genres to enhance the listener's experience based on their emotional state.
 
+## Observations and Results
+![Mood](Mood.jpg)
+This figure here shows the pictures for 4 different moods. The model accordingly predicts the mood for all 4 pictures in the figure acurately.
+
 ## Conclusion & Future Work
 1. The performance of the nearest neighbor search may vary across different methods (NearestNeighbors, AnnoyIndex, hnswlib). Comparing their accuracy, efficiency, and recall rates can help identify the most suitable method.
 2. Using a sentence tokenizer from the BERT family offers advantages in tokenizing text into meaningful segments. Instead of the current embedding model that learns embeddings from scratch, leveraging BERT-based tokenization can benefit the process.
