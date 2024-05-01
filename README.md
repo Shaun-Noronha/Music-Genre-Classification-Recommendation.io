@@ -141,7 +141,9 @@ For the demo, we have implemented 4 models:
   - Achieved the highest validation accuracy of 94.03% among the models, showcasing its effectiveness in handling overfitting while maintaining accuracy.
 
 ![Models](Models.jpg)
-    
+
+In the Advanced Music Genre Classification System, mood detection plays a crucial role in enhancing the music discovery experience by aligning genre recommendations with the listener's emotional state.
+Here's the implementation of the mood detection component of the project:
 ## Model Architecture
 - **Input Layer:**
   - Images are preprocessed to a uniform size of 48x48 pixels and converted to grayscale to reduce computational complexity while retaining necessary features for effective emotion recognition.
