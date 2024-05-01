@@ -140,7 +140,7 @@ For the demo, we have implemented 4 models:
 - **Accuracy:**
   - Achieved the highest validation accuracy of 94.03% among the models, showcasing its effectiveness in handling overfitting while maintaining accuracy.
 
-!
+![Models](Models.jpg)
     
 ## Model Architecture
 - **Input Layer:**
