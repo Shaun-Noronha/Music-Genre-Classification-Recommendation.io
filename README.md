@@ -182,7 +182,7 @@ These labels are crucial for the system as they directly influence the music gen
 
 This figure here shows the pictures for 4 different moods. The model accordingly predicts the mood for all 4 pictures in the figure accurately.
 
-# Recommendation Component of the Advanced Music Genre Classification System
+## Recommendation Component of the Advanced Music Genre Classification System
 
 ## Overview
 The recommendation component of the Advanced Music Genre Classification System leverages cosine similarity to offer music genre suggestions that align closely with a selected track, enhancing the user's music discovery experience.
