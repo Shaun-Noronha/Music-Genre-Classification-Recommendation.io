@@ -26,10 +26,10 @@ Pop
 Reggae
 Rock
 
-## Overview
+### Overview
 The GTZAN Music Genre Classification dataset, available on Kaggle, contains audio features extracted from segmented 3-second clips of music tracks. These features provide insights into various aspects of the audio signals and are commonly used in music genre classification tasks.
 
-## Features
+### Features
 Here is a brief description of each feature included in the dataset:
 
 1. **Chroma STFT (Short-Time Fourier Transform) Mean:** Measures the intensity of different pitches in a music track, providing a representation of the audio in terms of its harmonic content across 12 different pitch classes.
